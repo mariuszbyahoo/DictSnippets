@@ -18,11 +18,17 @@ namespace DictSnippets
 
 // The line of code below throws an Exception because of the lack of such a key
 // in the Dictionary.
-            Console.WriteLine(countries["MUS"].getName());
+//          Console.WriteLine(countries["MUS"].getName());
 
-            foreach (var country in countries.Values)
+            bool exists = countries.TryGetValue("MUS", out Country country);
+
+            if (exists)
             {
-                Console.WriteLine(country.getName());
+                Console.WriteLine(countries["MUS"].getName());
+            }
+            else
+            {
+                Console.WriteLine("There's no country with the code MUS");
             }
         }
     }
