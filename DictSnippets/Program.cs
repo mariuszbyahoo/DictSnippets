@@ -15,10 +15,9 @@ namespace DictSnippets
             countries.Add(norway.getCode(), norway);
             countries.Add(finland.getCode(), finland);
 
-
-            foreach (var country in countries)
+            foreach (var country in countries.Values)
             {
-                Console.WriteLine(country.Value.getName());
+                Console.WriteLine(country.getName());
             }
         }
     }
