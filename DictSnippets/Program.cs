@@ -16,8 +16,10 @@ namespace DictSnippets
             countries.Add(finland.getCode(), finland);
 
 
-            Country selectedCountry = countries["NOR"];
-            Console.WriteLine(selectedCountry.getName());
+            foreach (var country in countries)
+            {
+                Console.WriteLine(country.Value.getName());
+            }
         }
     }
 }
