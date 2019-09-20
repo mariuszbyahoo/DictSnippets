@@ -14,5 +14,14 @@
             this.Region = v3;
             this.population = v4;
         }
+
+        public string getName()
+        {
+            return this.Name;
+        }
+        public string getCode()
+        {
+            return this.Code;
+        }
     }
 }
