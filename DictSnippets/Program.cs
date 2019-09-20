@@ -16,6 +16,10 @@ namespace DictSnippets
                 { finland.getCode(), finland }
             };
 
+// The line of code below throws an Exception because of the lack of such a key
+// in the Dictionary.
+            Console.WriteLine(countries["MUS"].getName());
+
             foreach (var country in countries.Values)
             {
                 Console.WriteLine(country.getName());
